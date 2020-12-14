@@ -1,0 +1,122 @@
+.row{
+    width: 100%!important;
+    margin: 0!important;   
+}
+div[class^="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div[data-src]:hover {
+    cursor: pointer;
+}
+
+
+#main{
+    padding: 7% 6%;
+}
+
+#grilla{
+    
+}
+#video_principal{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Relleno izquierda - derecha */
+.relleno-i-1, .relleno-x-1{
+    padding-left: 1vw!important;
+}
+.relleno-d-1, .relleno-x-1{
+    padding-right: 1vw!important;
+}
+.relleno-i-5, .relleno-x-5{
+    padding-left: 5vw!important;
+}
+.relleno-d-5, .relleno-x-5{
+    padding-right: 5vw!important;
+}
+.relleno-i-6, .relleno-x-6{
+    padding-left: 6vw!important;
+}
+.relleno-d-6, .relleno-x-6{
+    padding-right: 6vw!important;
+}
+
+.relleno-i-7, .relleno-x-7{
+    padding-left: 7vw!important;
+}
+.relleno-d-7, .relleno-x-7{
+    padding-right: 7vw!important;
+}
+
+.relleno-i-8, .relleno-x-8{
+    padding-left: 8vw!important;
+}
+.relleno-d-8, .relleno-x-8{
+    padding-right: 8vw!important;
+}
+
+/* Altura de cajas*/
+.alto-1{
+    height: 1vw;
+}
+.alto-2{
+    height: 2vw;
+}
+.alto-3{
+    height: 3vw;
+}
+.alto-4{
+    height: 4vw;
+}
+.alto-5{
+    height: 5vw;
+}
+.alto-6{
+    height: 6vw;
+}
+.alto-7{
+    height: 7vw;
+}
+.alto-8{
+    height: 8vw;
+}
+.alto-9{
+    height: 9vw;
+}
+.alto-10{
+    height: 10vw;
+}
+
+ 
+div[class^="col-"]{
+    outline: 1px solid blue;
+}
+.col{            
+    outline: 1px solid green;
+}
+
+/* Ventana modal */
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.modal-body {
+    position:relative;
+    padding:0px;
+}
+.close {
+    position:absolute;
+    right:-30px;
+    top:0;
+    z-index:999;
+    font-size:2rem;
+    font-weight: normal;
+    color:#fff;
+    opacity:1;
+}
