@@ -59,6 +59,7 @@ $(document).ready(function() {
         console.log("cargarHeight");
         let height =  video_fondo.innerHeight();
         if(  height > 0 ){
+            console.log("height", height);
             redimensionar();
             clearInterval(interval_buscar_height);
         }
