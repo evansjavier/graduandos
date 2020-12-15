@@ -1,3 +1,13 @@
+/* Grilla de prueba */
+/* div[class^="col-"]{
+    outline: 1px solid blue;
+}
+.col{            
+    outline: 1px solid green;
+} */
+
+
+/* Clases auxiliares */
 .row{
     width: 100%!important;
     margin: 0!important;   
@@ -11,99 +21,33 @@ div[data-src]:hover {
     cursor: pointer;
 }
 
-
 #main{
+    position: relative;    
+}
+
+.principal{
+    width:  100%;
+    max-width:  100%;
+}
+
+.grilla{
     padding: 7% 6%;
 }
-
-#grilla{
-    
-}
-#video_principal{
+#video_fondo{
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
 }
 
-
-/* Relleno izquierda - derecha */
-.relleno-i-1, .relleno-x-1{
-    padding-left: 1vw!important;
-}
-.relleno-d-1, .relleno-x-1{
-    padding-right: 1vw!important;
-}
-.relleno-i-5, .relleno-x-5{
-    padding-left: 5vw!important;
-}
-.relleno-d-5, .relleno-x-5{
-    padding-right: 5vw!important;
-}
-.relleno-i-6, .relleno-x-6{
-    padding-left: 6vw!important;
-}
-.relleno-d-6, .relleno-x-6{
-    padding-right: 6vw!important;
-}
-
-.relleno-i-7, .relleno-x-7{
-    padding-left: 7vw!important;
-}
-.relleno-d-7, .relleno-x-7{
-    padding-right: 7vw!important;
-}
-
-.relleno-i-8, .relleno-x-8{
-    padding-left: 8vw!important;
-}
-.relleno-d-8, .relleno-x-8{
-    padding-right: 8vw!important;
-}
-
-/* Altura de cajas*/
-.alto-1{
-    height: 1vw;
-}
-.alto-2{
-    height: 2vw;
-}
-.alto-3{
-    height: 3vw;
-}
-.alto-4{
-    height: 4vw;
-}
-.alto-5{
-    height: 5vw;
-}
-.alto-6{
-    height: 6vw;
-}
-.alto-7{
-    height: 7vw;
-}
-.alto-8{
-    height: 8vw;
-}
-.alto-9{
-    height: 9vw;
-}
-.alto-10{
-    height: 10vw;
-}
-
- 
-div[class^="col-"]{
-    outline: 1px solid blue;
-}
-.col{            
-    outline: 1px solid green;
+.estudiante{
+    padding: 0;
 }
 
 /* Ventana modal */
 .modal-dialog {
     max-width: 800px;
-    margin: 30px auto;
+    margin: 50px auto;
 }
 
 .modal-body {
@@ -120,3 +64,71 @@ div[class^="col-"]{
     color:#fff;
     opacity:1;
 }
+
+#myModal .modal-body{
+    line-height: 0;
+}
+
+.modal-open .modal {
+    display: flex!important;
+    align-items: center!important;
+}
+
+.modal-open .modal  .modal-dialog {
+    flex-grow: 1;
+}
+.row * {
+    height: 100%;
+}
+
+#rotar_pantalla{
+    width: 25px;
+}
+
+
+@media (orientation: landscape) {
+    #rotar_pantalla {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+/* Relleno izquierda - derecha */
+.relleno-i-1, .relleno-x-1{padding-left:  calc(1% * 1.19) !important;}
+.relleno-d-1, .relleno-x-1{padding-right: calc(1% * 1.19) !important;}
+.relleno-i-2, .relleno-x-2{padding-left:  calc(2% * 1.19) !important;}
+.relleno-d-2, .relleno-x-2{padding-right: calc(2% * 1.19)!important;}
+.relleno-i-3, .relleno-x-3{padding-left:  calc(3% * 1.19) !important;}
+.relleno-d-3, .relleno-x-3{padding-right: calc(3% * 1.19)!important;}
+.relleno-i-4, .relleno-x-4{padding-left:  calc(4% * 1.19) !important;}
+.relleno-d-4, .relleno-x-4{padding-right: calc(4% * 1.19)!important;}
+.relleno-i-5, .relleno-x-5{padding-left:  calc(5% * 1.19) !important;}
+.relleno-d-5, .relleno-x-5{padding-right: calc(5% * 1.19)!important;}
+.relleno-i-6, .relleno-x-6{padding-left:  calc(6% * 1.19) !important;}
+.relleno-d-6, .relleno-x-6{padding-right: calc(6% * 1.19)!important;}
+.relleno-i-7, .relleno-x-7{padding-left:  calc(7% * 1.19)!important;}
+.relleno-d-7, .relleno-x-7{padding-right: calc(7% * 1.19)!important;}
+.relleno-i-8, .relleno-x-8{padding-left:  calc(8% * 1.19)!important;}
+.relleno-d-8, .relleno-x-8{padding-right: calc(8% * 1.19)!important;}
+.relleno-i-9, .relleno-x-9{padding-left:  calc(9% * 1.19)!important;}
+.relleno-d-9, .relleno-x-9{padding-right: calc(9% * 1.19)!important;}
+.relleno-i-10, .relleno-x-10{padding-left:  calc(10% * 1.19)!important;}
+.relleno-d-10, .relleno-x-10{padding-right: calc(10% * 1.19)!important;}
+.relleno-i-11, .relleno-x-11{padding-left:  calc(11% * 1.19)!important;}
+.relleno-d-11, .relleno-x-11{padding-right: calc(11% * 1.19)!important;}
+.relleno-i-12, .relleno-x-12{padding-left:  calc(12% * 1.19)!important;}
+.relleno-d-12, .relleno-x-12{padding-right: calc(12% * 1.19)!important;}
+
+/* Altura de cajas*/
+.alto-1{height: calc(1% * 1.51);}
+.alto-2{height: calc(2% * 1.51);}
+.alto-3{height: calc(3% * 1.51);}
+.alto-4{height: calc(4% * 1.51);}
+.alto-5{height: calc(5% * 1.51);}
+.alto-6{height: calc(6% * 1.51);}
+.alto-7{height: calc(7% * 1.51);}
+.alto-8{height: calc(8% * 1.51);}
+.alto-9{height: calc(9% * 1.51);}
+.alto-10{height: calc(10% * 1.51);}
+.alto-11{height: calc(11% * 1.51);}
+.alto-12{height: calc(12% * 1.51);}
