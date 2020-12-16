@@ -38,9 +38,17 @@ $(document).ready(function() {
         let ancho_video = video_fondo[0].videoWidth;
         let proporcion_video = ancho_video/alto_video;
 
+        console.log("alto_video", alto_video);
+        console.log("ancho_video", ancho_video);
+        console.log("proporcion_video", proporcion_video);
+
         let width_ventana = $(window).width();
         let height_ventana = $(window).height();
         let proporcion_ventana = width_ventana / height_ventana;
+
+        console.log("width_ventana", width_ventana);
+        console.log("height_ventana", height_ventana);
+        console.log("proporcion_ventana", proporcion_ventana);
 
         if( proporcion_ventana > proporcion_video){ // Ocupar todo el alto            
             height = height_ventana;
