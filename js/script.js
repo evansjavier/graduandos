@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-    let reproductor = $("#videomodal");
-    let video_fondo = $("#video_fondo");
+    var reproductor = $('#videomodal');
+    var video_fondo = $('#video_fondo');
 
-    let interval_buscar_height;
+    var interval_buscar_height;
 
     var $videoSrc;  
     $('.estudiante').click(function() {
@@ -37,16 +37,16 @@ $(document).ready(function() {
     /** Ajustar alto de la grilla */
     var redimensionar = function(){
         
-        let width = null;  // ancho a asignar
-        let height = null; // alto a asignar
+        var width = null;  // ancho a asignar
+        var height = null; // alto a asignar
 
-        let alto_video = video_fondo[0].videoHeight;
-        let ancho_video = video_fondo[0].videoWidth;
-        let proporcion_video = ancho_video/alto_video;
+        var alto_video = video_fondo[0].videoHeight;
+        var ancho_video = video_fondo[0].videoWidth;
+        var proporcion_video = ancho_video/alto_video;
 
-        let width_ventana = $(window).width();
-        let height_ventana = $(window).height();
-        let proporcion_ventana = width_ventana / height_ventana;
+        var width_ventana = $(window).width();
+        var height_ventana = $(window).height();
+        var proporcion_ventana = width_ventana / height_ventana;
 
         if( proporcion_ventana > proporcion_video){ // Ocupar todo el alto            
             height = height_ventana;
@@ -61,7 +61,7 @@ $(document).ready(function() {
     };
 
     /* Intentar cargar el ancho del video, hasta que esté disponible */
-    let cargarHeight = function(){                
+    var cargarHeight = function(){
         if( video_fondo[0].videoHeight > 0 && video_fondo[0].videoWidth > 0 ){
             redimensionar();
             clearInterval(interval_buscar_height);
