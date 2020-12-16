@@ -38,17 +38,9 @@ $(document).ready(function() {
         let ancho_video = video_fondo[0].videoWidth;
         let proporcion_video = ancho_video/alto_video;
 
-        console.log("alto_video", alto_video);
-        console.log("ancho_video", ancho_video);
-        console.log("proporcion_video", proporcion_video);
-
         let width_ventana = $(window).width();
         let height_ventana = $(window).height();
         let proporcion_ventana = width_ventana / height_ventana;
-
-        console.log("width_ventana", width_ventana);
-        console.log("height_ventana", height_ventana);
-        console.log("proporcion_ventana", proporcion_ventana);
 
         if( proporcion_ventana > proporcion_video){ // Ocupar todo el alto            
             height = height_ventana;
@@ -62,12 +54,9 @@ $(document).ready(function() {
         $(".grilla").first().innerHeight( height );
     };
 
-    /* Cargar el ancho del video */
-    let cargarHeight = function(){
-        console.log("cargarHeight");
-        let height =  video_fondo.innerHeight();
-        if(  height > 0 ){
-            console.log("height", height);
+    /* Intentar cargar el ancho del video, hasta que esté disponible */
+    let cargarHeight = function(){                
+        if( video_fondo[0].videoHeight > 0 && video_fondo[0].videoWidth > 0 ){
             redimensionar();
             clearInterval(interval_buscar_height);
         }
