@@ -11,6 +11,12 @@ $(document).ready(function() {
         console.log($videoSrc);
     });
 
+
+    $('#main').click(function() {
+        video_fondo[0].play();
+    });
+
+
     /** Reproducir video al abrir la modal */
     $('#myModal').on('shown.bs.modal', function (e) {
         reproductor.attr('src',$videoSrc); 
