@@ -1,10 +1,10 @@
 /* Grilla de prueba */
-div[class^="col-"]{
+/* div[class^="col-"]{
     outline: 1px solid blue;
 }
 .col{            
     outline: 1px solid green;
-}
+} */
 
 
 /* Clases auxiliares */
