@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/grilla.css">
+        <link rel="stylesheet" href="css/loader.css">
+
+        <style>
+            /* Grilla de prueba */
+            div[class^="col-"]{ outline: 1px solid blue; }
+            .col{ outline: 1px solid green; }
+
+            .grilla{ /* Margenes de la grilla principal */
+                padding: 7% 6%; /* 7% arriba y abajo, 6% izquierda y derecha */
+            }
+        </style>
+
+        <title>Promoción 2016 / 2019</title>
+    </head>
+    <body>
+
+        <!-- Loader -->
+        <section class="section section--loaders">
+            <div class="section__item">
+                <div class="loader09"></div>
+            </div>
+        </section>
+
+        <!-- Container con las fotos y video -->
+        <div id="main" class="mx-auto principal oculto">
+
+            <!-- Video de fondo -->
+            <video id ="video_fondo" class="w-100 z-index-dropdown" autoplay muted loop controlsList="nodownload">
+                <source type="video/mp4" src="videos/fondo02.mp4"></source>
+                <!-- <source type="video/webm" src="videos/fondo02.webm"></source> -->
+            </video>
+            
+            <!-- Grilla -->
+            <div class="container-fluid grilla">
+
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="container">            
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <video controls class="w-100 video">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen rotar pantalla -->
+        <div class="container-fluid principal oculto">
+            <img src="img/rotar.webp" id="rotar_pantalla" class="float-right my-3" style="display: none;">            
+        </div>
+
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
