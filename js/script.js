@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
-    console.log("v. 0.2")
+    console.log("v. 0.3")
 
-    var reproductor = $('#myModal .modal-body .video');
     var video_fondo = $('#video_fondo');
 
     var interval_buscar_height;
@@ -45,38 +44,13 @@ $(document).ready(function() {
     // Cerrar modal al finalizar el video
     document.addEventListener('ended', function(e){
         if($(e.target).is('video')){
-            
-            console.log( $(e.target) );
-            console.log("fin");
             $('#myModal').modal('hide');
         }
     }, true);
 
-
     /** Ajustar alto de la grilla */
     var redimensionar = function(){
-        
-        var width = null;  // ancho a asignar
-        var height = null; // alto a asignar
-
-        var alto_video = video_fondo[0].videoHeight;
-        var ancho_video = video_fondo[0].videoWidth;
-        var proporcion_video = ancho_video/alto_video;
-
-        var width_ventana = $(window).width();
-        var height_ventana = $(window).height();
-        var proporcion_ventana = width_ventana / height_ventana;
-
-        if( proporcion_ventana > proporcion_video){ // Ocupar todo el alto            
-            height = height_ventana;
-            width = height * proporcion_video;
-        }
-        else{ // Ocupar todo al ancho
-            width = width_ventana;
-            height = width / proporcion_video;
-        }
-        $(".principal").first().innerWidth( width );
-        $(".grilla").first().innerHeight( height );
+        $(".grilla").first().innerHeight( $("#video_fondo").innerHeight() );
     };
 
     /* Intentar cargar el ancho del video, hasta que esté disponible */
@@ -92,11 +66,9 @@ $(document).ready(function() {
     
     // Detectar móviles
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
+    if (isMobile)
         $("#rotar_pantalla").show();
-    }
-    else{
+    else
         $("#rotar_pantalla").hide();
-    }
-
+    
 });

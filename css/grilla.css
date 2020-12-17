@@ -1,12 +1,3 @@
-/* Grilla de prueba */
-/* div[class^="col-"]{
-    outline: 1px solid blue;
-}
-.col{            
-    outline: 1px solid green;
-} */
-
-
 /* Clases auxiliares */
 .row{
     width: 100%!important;
@@ -26,17 +17,13 @@ div[data-src]:hover {
 }
 
 .principal{
-    width:  100%;
-    max-width:  100%;
+    width:  100%;    
 }
 
 .oculto{
     visibility: hidden;
 }
 
-.grilla{
-    padding: 7% 6%;
-}
 #video_fondo{
     position: absolute;
     top: 0;
@@ -50,7 +37,7 @@ div[data-src]:hover {
 
 /* Ventana modal */
 .modal-dialog {
-    max-width: 800px;
+    max-width: 70%;
     margin: 50px auto;
 }
 
