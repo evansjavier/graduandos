@@ -8,6 +8,11 @@ $(document).ready(function() {
     var interval_buscar_height;
 
     var $videoSrc;  
+
+    $('#rotar_pantalla').click(function() {
+        $('#video_fondo')[0].play();
+    });
+
     $('.estudiante').click(function() {
         $videoSrc = $(this).data( "src" );
         console.log($videoSrc);
