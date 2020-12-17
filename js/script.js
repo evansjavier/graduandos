@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-    var reproductor = $('#videomodal');
+    console.log("v. 0.2")
+
+    var reproductor = $('#myModal .modal-body .video');
     var video_fondo = $('#video_fondo');
 
     var interval_buscar_height;
@@ -11,28 +13,40 @@ $(document).ready(function() {
         console.log($videoSrc);
     });
 
-
-    $('#main').click(function() {
-        video_fondo[0].play();
-    });
-
-
     /** Reproducir video al abrir la modal */
     $('#myModal').on('shown.bs.modal', function (e) {
-        reproductor.attr('src',$videoSrc); 
-        reproductor[0].play();
+
+        var src_base = $videoSrc;
+        var src_webm = $videoSrc.substr(0, $videoSrc.lastIndexOf(".")) + ".webm";
+
+        $("#myModal .modal-body .video").remove();
+        var sources_video =
+            '<video controls class="w-100 video">'+
+                '<source type="video/mp4" src="' + src_base + '"></source>' +
+                '<source type="video/webm" src="' + src_webm + '"></source>'
+            '</video>';
+
+        $("#myModal .modal-body").append(sources_video);
+
+        $("#myModal .modal-body video")[0].play();        
     })
     
     // Detener reproducción al cerrar la modal
     $('#myModal').on('hide.bs.modal', function (e) {
-        reproductor[0].pause();
-        reproductor[0].currentTime = 0;
+        $("#myModal .modal-body .video").remove();
+        $("#myModal .modal-body").append('<video class="w-100 video"></video>');
     });
 
     // Cerrar modal al finalizar el video
-    reproductor[0].onended = function() {        
-        $('#myModal').modal('hide');
-    };
+    document.addEventListener('ended', function(e){
+        if($(e.target).is('video')){
+            
+            console.log( $(e.target) );
+            console.log("fin");
+            $('#myModal').modal('hide');
+        }
+    }, true);
+
 
     /** Ajustar alto de la grilla */
     var redimensionar = function(){

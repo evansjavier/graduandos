@@ -15,7 +15,10 @@
         <div id="main" class="mx-auto principal">
 
             <!-- Video de fondo -->
-            <video id ="video_fondo" class="w-100 z-index-dropdown" src="videos/fondo01.mp4" autoplay muted loop></video>
+            <video id ="video_fondo" class="w-100 z-index-dropdown" autoplay muted loop>
+                <source type="video/mp4" src="videos/fondo01.mp4"></source>
+                <source type="video/webm" src="videos/fondo01.webm"></source>
+            </video>
             
             <!-- Grilla -->
             <div class="container-fluid grilla">
@@ -130,7 +133,8 @@
                     <div class="modal-content">
 
                         <div class="modal-body">
-                            <video src="" id="videomodal" controls class="w-100"></video>
+                            <video controls class="w-100 video">
+                            </video>
                         </div>
                     </div>
                 </div>
