@@ -83,6 +83,7 @@ $(document).ready(function() {
     var cargarHeight = function(){
         if( video_fondo[0].videoHeight > 0 && video_fondo[0].videoWidth > 0 ){
             redimensionar();
+            $("#main").removeClass("oculto"); // mostrar video sólo cuando ya se obtuvo su tamaño
             clearInterval(interval_buscar_height);
         }
     }

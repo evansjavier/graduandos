@@ -30,6 +30,10 @@ div[data-src]:hover {
     max-width:  100%;
 }
 
+.oculto{
+    visibility: hidden;
+}
+
 .grilla{
     padding: 7% 6%;
 }
