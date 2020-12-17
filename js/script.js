@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    console.log("v. 0.3")
+    console.log("v. 0.3 controsl")
 
     var video_fondo = $('#video_fondo');
 
