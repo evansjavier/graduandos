@@ -40,7 +40,7 @@ div[data-src]:hover {
 /* Ventana modal */
 .modal-dialog {
     max-width: 70%;
-    margin: 50px auto;
+    margin: 0 auto;
 }
 
 .modal-body {
@@ -64,11 +64,12 @@ div[data-src]:hover {
 
 .modal-open .modal {
     display: flex!important;
-    align-items: center!important;
+    align-items: top!important;
 }
 
 .modal-open .modal  .modal-dialog {
     flex-grow: 1;
+    top: 22%;
 }
 .row * {
     height: 100%;
