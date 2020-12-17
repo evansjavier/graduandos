@@ -21,7 +21,8 @@ div[data-src]:hover {
 }
 
 .oculto{
-    visibility: hidden;
+    visibility:hidden;
+    position: fixed !important;
 }
 
 #video_fondo{
