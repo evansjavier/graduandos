@@ -26,7 +26,7 @@ $(document).ready(function() {
 
         $("#myModal .modal-body .video").remove();
         var sources_video =
-            '<video controls class="w-100 video">'+
+            '<video controls class="w-100 video" controlsList="nodownload">'+
                 '<source type="video/mp4" src="' + src_base + '"></source>' +
                 '<source type="video/webm" src="' + src_webm + '"></source>'
             '</video>';
