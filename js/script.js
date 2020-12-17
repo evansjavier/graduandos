@@ -72,9 +72,15 @@ $(document).ready(function() {
     
     // Detectar móviles
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile)
+    if (isMobile){
         $("#rotar_pantalla").show();
-    else
+        console.log("mobile");
+    }
+    else{
         $("#rotar_pantalla").hide();
+        console.log("no mobile")
+    }
+
+        
     
 });
