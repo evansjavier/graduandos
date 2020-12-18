@@ -1,12 +1,14 @@
 $(document).ready(function() {
 
-    console.log("v. 0.3 controsl")
+    console.log("v. 0.4 gif")
 
     var video_fondo = $('#video_fondo');
 
     var interval_buscar_height;
 
     var $videoSrc;  
+
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     $('#rotar_pantalla').click(function() {
         $('#video_fondo')[0].play();
@@ -50,37 +52,53 @@ $(document).ready(function() {
 
     /** Ajustar alto de la grilla */
     var redimensionar = function(){
-        $(".grilla").first().innerHeight( $("#video_fondo").innerHeight() );
+
+        if(isMobile){
+            var he =   $("#imagen_fondo").innerHeight();
+            $(".grilla").first().innerHeight(  he );
+            console.log("height ", he )
+        }
+        else{
+            $(".grilla").first().innerHeight( $("#video_fondo").innerHeight() );
+        }
+
     };
+
+    /** Cerrar loader */
+    var cerrarLoader = function (){
+        setTimeout(function(){
+            $(".principal").removeClass("oculto");
+            $(".section--loaders").addClass("oculto");
+        }, 500);        
+    }
 
     /* Intentar cargar el ancho del video, hasta que esté disponible */
     var cargarHeight = function(){
-        if( video_fondo[0].videoHeight > 0 && video_fondo[0].videoWidth > 0 ){
-            redimensionar();
 
-            // mostrar video y grilla sólo cuando ya se obtuvo el tamaño del video
-            setTimeout(function(){
-                $(".principal").removeClass("oculto");
-                $(".section--loaders").addClass("oculto");    
-            }, 500);
-            
+        console.log( $("#imagen_fondo").innerHeight());
+
+        var alto = isMobile ? $("#imagen_fondo").innerHeight() : video_fondo[0].videoHeight;
+
+        // mostrar video y grilla sólo cuando ya se obtuvo el tamaño del video o imagen
+        if(alto > 0){
+            redimensionar();
+            cerrarLoader();
             clearInterval(interval_buscar_height);
         }
     }
     $( window ).resize(redimensionar);
-    interval_buscar_height = setInterval(cargarHeight, 100);
-    
+
     // Detectar móviles
-    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile){
+        $("#imagen_fondo").attr("src", $("#data_principal").data("img"));
+        redimensionar();
         $("#rotar_pantalla").show();
         console.log("mobile");
     }
     else{
+        $("#video_fondo").attr("src", $("#data_principal").data("video"));
         $("#rotar_pantalla").hide();
-        console.log("no mobile")
     }
+    interval_buscar_height = setInterval(cargarHeight, 100);
 
-        
-    
 });

@@ -33,11 +33,13 @@
         <!-- Container con las fotos y video -->
         <div id="main" class="mx-auto principal oculto">
 
+            <!-- Url de video o imagen de fondo. EDITAR AQUÍ -->
+            <div id="data_principal" data-img="img/fondo01.gif" data-video="videos/fondo01.mp4" class="hidden"></div>
+
             <!-- Video de fondo -->
-            <video id ="video_fondo" class="w-100 z-index-dropdown" autoplay muted loop controlsList="nodownload">
-                <source type="video/mp4" src="videos/fondo01min.mp4"></source>
-                <!-- <source type="video/webm" src="videos/fondo01.webm"></source> -->
-            </video>
+            <video id ="video_fondo" class="w-100 z-index-dropdown" autoplay muted="muted" src="" loop controlsList="nodownload"></video>
+            <!-- Imagen mostrada en móviles -->
+            <img id="imagen_fondo" src ="" class="w-100">
             
             <!-- Grilla -->
             <div class="container-fluid grilla">
@@ -159,7 +161,7 @@
                 </div>
             </div>
         </div>
-        <div>v1m</div>
+
         <!-- Imagen rotar pantalla -->
         <div class="container-fluid principal oculto">
             <img src="img/rotar.webp" id="rotar_pantalla" class="float-right my-3" style="display: none;">            

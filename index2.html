@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/grilla.css">
         <link rel="stylesheet" href="css/loader.css">
-        <link rel="preload" href="videos/fondo02.mp4" as="video">
 
         <style>
             /* Grilla de prueba */
@@ -19,6 +18,7 @@
                 padding: 5% 4%; /* 5% arriba y abajo, 4% izquierda y derecha */
             }
         </style>
+
         <title>Promoción 2016 / 2019</title>
     </head>
     <body>
@@ -33,14 +33,17 @@
         <!-- Container con las fotos y video -->
         <div id="main" class="mx-auto principal oculto">
 
+            <!-- Url de video o imagen de fondo. EDITAR AQUÍ -->
+            <div id="data_principal" data-img="img/fondo02.gif" data-video="videos/fondo02.mp4" class="hidden"></div>
+
             <!-- Video de fondo -->
-            <video id ="video_fondo" class="w-100 z-index-dropdown" autoplay muted="muted" loop controlsList="nodownload">
-                <source type="video/mp4" src="videos/fondo02.mp4" controls></source>
-                <!-- <source type="video/webm" src="videos/fondo02.webm"></source> -->
-            </video>
+            <video id ="video_fondo" class="w-100 z-index-dropdown" autoplay muted="muted" src="" loop controlsList="nodownload"></video>
+            <!-- Imagen mostrada en móviles -->
+            <img id="imagen_fondo" src ="" class="w-100">
             
             <!-- Grilla -->
             <div class="container-fluid grilla">
+
                 <div class="row relleno-x-11 alto-11"> <!-- Fila 1 -->
                     <div class="col estudiante" data-toggle="modal" data-src="videos/click01.mp4" data-target="#myModal" ></div>
                     <div class="col estudiante" data-toggle="modal" data-src="videos/click02.mp4" data-target="#myModal" ></div>                
